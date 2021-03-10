@@ -15,9 +15,11 @@ html(lang="ru-RU")
     <meta name="description" content="Онлайн-магазин продажи зубных щеток"/>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
-    <link rel="preload" href="libs/normalize.min.css" as="style">
-    <link rel="preload" href="libs/swiper-bundle.min.css" as="style">
-    link(rel="stylesheet", href="css/style.min.css")
+    <link rel="preload" href="./libs/normalize.min.css" as="style">
+    <link rel="preload" href="./libs/swiper-bundle.min.css" as="style">
+    link(rel="stylesheet", href="./libs/normalize.min.css")
+    link(rel="stylesheet", href="./libs/swiper-bundle.min.css")
+    link(rel="stylesheet", href="./css/style.min.css")
     block styles
   body
     -var page
@@ -74,10 +76,10 @@ html(lang="ru-RU")
                       +svg('b-modal-media__icon', 'google')
 
     //vendor scripts
-    script(src="libs/svgxuse.min.js")
-    script(src="libs/jquery-3.5.1.min.js")
-    <script src="libs/swiper-bundle.min.js"></script>
-    script(src="libs/da.js")
-    script(src="js/scripts.js")
+    script(src="./libs/svgxuse.min.js")
+    script(src="./libs/jquery-3.5.1.min.js")
+    <script src="./libs/swiper-bundle.min.js"></script>
+    script(src="./libs/da.js")
+    script(src="./js/scripts.js")
     //user scripts
     block script

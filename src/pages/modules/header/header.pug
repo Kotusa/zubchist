@@ -1,0 +1,142 @@
+header.b-header
+    .b-header__top-nav
+        .b-header__container.b-container
+            .b-header__inner
+                .b-header__dropdown.b-dropdown(data-da=".b-header__menu,575,0" rel="js-dropdown")
+                    .b-dropdown__head(rel="js-dropdown-head")
+                        +svg('b-dropdown__icon', 'place')
+                        span.b-dropdown__name Хабаровск
+                        +svg('b-dropdown__arrow', 'arrow')
+                    ul.b-dropdown__content(rel="js-dropdown-content")
+                        li.b-dropdown__item.selected Хабаровск
+                        li.b-dropdown__item Москва
+                        li.b-dropdown__item Санкт-Петербург
+                        li.b-dropdown__item Саратов
+                nav.b-header__nav.b-nav(data-da=".b-header__menu,575,1")
+                    ul.b-nav__list
+                        li.b-nav__item
+                            a(href="#").b-nav__link О нас
+                        li.b-nav__item
+                            a(href="#").b-nav__link Оплата
+                        li.b-nav__item
+                            a(href="#").b-nav__link Доставка
+                        li.b-nav__item
+                            a(href="#").b-nav__link Возврат
+                        li.b-nav__item
+                            a(href="#").b-nav__link Контакты
+                        li.b-nav__item
+                            a(href="#").b-nav__link Служба поддержки
+    .b-header__container.b-container
+        .b-header__inner.b-header__inner--padding
+            .b-header__logo.b-logo
+                a(href="#").b-logo__content
+                    span.b-logo__title Зубчист
+                    span.b-logo__subtitle онлайн магазин
+            .b-header__wrap
+                .b-header__catalog.b-catalog(data-da=".b-header__menu,575,2")
+                    a(href="#").b-catalog__button.b-button.b-button--large
+                        +svg('b-catalog__icon', 'vector-header')
+                        span.b-catalog__title Каталог
+                form.b-header__search.b-search(rel="js-mobile-search")
+                    .b-search__dropdown.b-dropdown(rel="js-dropdown")
+                        .b-dropdown__head(rel="js-dropdown-head")
+                            span.b-dropdown__name Везде
+                            +svg('b-dropdown__arrow', 'arrow')
+                        ul.b-dropdown__content(rel="js-dropdown-content")
+                            li.b-dropdown__item.selected Везде
+                            li.b-dropdown__item На этой странице
+                    label(for="search").b-search__label Поиск
+                    input#search(type="search" placeholder="Поиск везде").b-search__input
+                    button(type="submit" aria-label="search").b-search__button
+                        +svg('b-search__icon', 'search')
+            .b-header__action.b-action(data-da=".b-header__menu,575,3")
+                a(href="#authorization" rel="js-modal-opener" title="Мой профиль").b-action__item
+                    +svg('b-action__icon', 'account')
+                    span.b-action__title Мой профиль
+                a(href="#" title="Избранное").b-action__item
+                    +svg('b-action__icon', 'heart')
+                    span.b-action__title Избранное
+                .b-action__item.b-action__item--cart
+                    a(href='#' title="Корзина").b-action__link
+                        +svg('b-action__icon', 'cart')
+                        span.b-action__title Корзина
+                    .b-action__cart.b-cart
+                        .b-cart__content
+                            ul.b-cart__list
+                                li.b-cart__item.b-item
+                                    .b-item__content
+                                        a(href='#').b-item__image
+                                            img(src="/img/card-1.png", alt="").b-item__img
+                                        .b-item__info
+                                            a(href='#').b-item__title Oral-B Pro 400
+                                            span.b-item__price(data-currency="руб." rel="js-price") 3020
+                                    .b-item__action
+                                        .b-item__counter.b-counter(rel="js-counter")
+                                            input(type="number" min="0" value="0").b-counter__input
+                                            .b-counter__btns
+                                                button.b-counter__button.b-counter__button--up(rel="js-plus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                                button.b-counter__button.b-counter__button--down(rel="js-minus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                        button.b-item__delete
+                                            +svg('b-item__icon', 'delete')
+                                li.b-cart__item.b-item
+                                    .b-item__content
+                                        a(href='#').b-item__image
+                                            img(src="/img/card-1.png", alt="").b-item__img
+                                        .b-item__info
+                                            a(href='#').b-item__title Oral-B Pro 400
+                                            span.b-item__price(data-currency="руб." rel="js-price") 3020
+                                    .b-item__action
+                                        .b-item__counter.b-counter(rel="js-counter")
+                                            input(type="number" min="0" value="0").b-counter__input
+                                            .b-counter__btns
+                                                button.b-counter__button.b-counter__button--up(rel="js-plus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                                button.b-counter__button.b-counter__button--down(rel="js-minus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                        button.b-item__delete
+                                            +svg('b-item__icon', 'delete')
+                                li.b-cart__item.b-item
+                                    .b-item__content
+                                        a(href='#').b-item__image
+                                            img(src="/img/card-1.png", alt="").b-item__img
+                                        .b-item__info
+                                            a(href='#').b-item__title Oral-B Pro 400
+                                            span.b-item__price(data-currency="руб." rel="js-price") 3020
+                                    .b-item__action
+                                        .b-item__counter.b-counter(rel="js-counter")
+                                            input(type="number" min="0" value="0").b-counter__input
+                                            .b-counter__btns
+                                                button.b-counter__button.b-counter__button--up(rel="js-plus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                                button.b-counter__button.b-counter__button--down(rel="js-minus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                        button.b-item__delete
+                                            +svg('b-item__icon', 'delete')
+                                li.b-cart__item.b-item
+                                    .b-item__content
+                                        a(href='#').b-item__image
+                                            img(src="/img/card-1.png", alt="").b-item__img
+                                        .b-item__info
+                                            a(href='#').b-item__title Oral-B Pro 400
+                                            span.b-item__price(data-currency="руб." rel="js-price") 3020
+                                    .b-item__action
+                                        .b-item__counter.b-counter(rel="js-counter")
+                                            input(type="number" min="0" value="0").b-counter__input
+                                            .b-counter__btns
+                                                button.b-counter__button.b-counter__button--up(rel="js-plus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                                button.b-counter__button.b-counter__button--down(rel="js-minus-button")
+                                                    +svg('b-counter__icon', 'btn-arr')
+                                        button.b-item__delete
+                                            +svg('b-item__icon', 'delete')
+                            .b-cart__action
+                                .b-cart__sum
+                                    span.b-cart__text Итог:
+                                    span.b-cart__total(data-currency="руб." rel="js-price") 12080
+                                a(href="#").b-cart__button.b-button В корзину
+                                button.b-cart__button.b-cart__button--secondary Очистить корзину
+            .b-header__mobile-toggle.b-mobile-toggle(rel="js-mobile-toggle")
+                .b-mobile-toggle__item: span
+    .b-header__menu(rel="js-mobile-menu")

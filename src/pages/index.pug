@@ -1,0 +1,702 @@
+extends layout/base
+block variables
+    -var currentPage = 'index'
+    -var title = 'Зубчист | Главная'
+
+block page-content
+    section.b-information(rel="js-information")
+        .b-information__container.b-container
+            .b-information__inner
+                .b-information__swiper-container.swiper-container(rel="js-slider")
+                    .swiper-wrapper
+                        .swiper-slide
+                            .b-information__inform-card.b-inform-card(style={"background-image":"url('img/inf-bg-1.png')"})
+                                .b-inform-card__content
+                                    .b-inform-card__info
+                                        h3.b-inform-card__title Сами в шоке!
+                                        p.b-inform-card__text Скидка 25% на всю продукцию Colgate
+                                    a(href="#").b-inform-card__button.b-button.b-button--white Перейти в каталог
+                                .b-inform-card__image
+                                    img(src="img/inf-img-1.png", alt="")
+                        .swiper-slide
+                            .b-information__inform-card.b-inform-card(style={"background-image":"url('img/inf-bg-2.png')"})
+                                .b-inform-card__content
+                                    .b-inform-card__info
+                                        h3.b-inform-card__title Скидки 25%
+                                        p.b-inform-card__text Скидки от 5% до 25% на всю зубную пасту
+                                    a(href="#").b-inform-card__button.b-button.b-button--white Перейти в каталог
+                                .b-inform-card__image
+                                    img(src="img/inf-img-2.png", alt="")
+                        .swiper-slide
+                            .b-information__inform-card.b-inform-card(style={"background-image":"url('img/inf-bg-3.png')"})
+                                .b-inform-card__content
+                                    .b-inform-card__info
+                                        h3.b-inform-card__title Детские зубные наборы
+                                        p.b-inform-card__text Мы собрали для вас детские зубные наборы!
+                                    a(href="#").b-inform-card__button.b-button.b-button--white Подробнее
+                                .b-inform-card__image
+                                    img(src="img/inf-img-3.png", alt="")
+                .b-information__custom-navigation.b-custom-navigation
+                    button.b-custom-navigation__button.b-custom-navigation__button--prev
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+                    button.b-custom-navigation__button.b-custom-navigation__button--next
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+
+    section.b-compilation(rel="js-compilation")
+        .b-compilation__container.b-container
+            .b-compilation__inner
+                .b-compilation__head
+                    h2.b-compilation__title.b-title Хиты продаж
+                    a(href="#").b-compilation__link.b-link Смотреть все
+                        +svg('b-link__icon', 'arrow')
+                .b-compilation__swiper-container.swiper-container(rel="js-slider")
+                    .swiper-wrapper
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-1.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>1</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 2490
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="4")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>37</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-3.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>5</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 5600
+                                            a(href="#").b-content__name Donfeel HSD-010
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="5")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>56</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-2.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>3</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 4500
+                                            a(href="#").b-content__name Oral-B Pro 400 CrossAction Orange
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="3")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>28</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-1.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>2</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 2300
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16 Pro 600
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="4")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>30</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-2.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>7</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 8900
+                                            a(href="#").b-content__name Donfeel HSD-010
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="3")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>109</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-3.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>14</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 1370
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="2")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>12</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                .b-compilation__custom-navigation.b-custom-navigation
+                    button.b-custom-navigation__button.b-custom-navigation__button--prev
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+                    button.b-custom-navigation__button.b-custom-navigation__button--next
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+
+    section.b-compilation(rel="js-compilation-sale")
+        .b-compilation__container.b-container
+            .b-compilation__inner
+                .b-compilation__head
+                    +svg('b-compilation__icon', 'fire')
+                    h2.b-compilation__title.b-title Не упустите скидки!
+                    a(href="#").b-compilation__link.b-link Смотреть все
+                        +svg('b-link__icon', 'arrow')
+                .b-compilation__content
+                    .b-compilation__current.b-current
+                        .b-current__inner
+                            .b-current__head
+                                .b-current__column
+                                    +svg('b-current__icon', 'calendar')
+                                    span.b-current__title Товар дня
+                                .b-current__column
+                                    +svg('b-current__icon', 'time')
+                                    .b-current__title.b-current__title--timer.b-timer
+                                        span.b-timer__val(rel="js-timer-hours") 12
+                                        span.b-timer__val(rel="js-timer-minutes") 43
+                                        span.b-timer__val(rel="js-timer-seconds") 23
+                            .b-current__content
+                                .b-current__card.b-card.b-card--secondary
+                                    .b-card__inner
+                                        a(href='#' aria-label="daily").b-card__preview.b-preview.b-preview--secondary
+                                            img(src="img/current-img.png", alt="").b-preview__image
+                                        .b-card__content.b-content
+                                            .b-content__info
+                                                a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                                .b-content__reviews.b-reviews
+                                                    .b-reviews__rating.b-rating(data-rating="4")
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                    a(href="#").b-reviews__val <span>18</span> отзывов
+                                                .b-content__price.b-price.b-price--sale
+                                                    .b-price__row
+                                                        span.b-price__cost(data-currency="руб." rel="js-price") 1300
+                                                        span.b-price__cost.b-price__cost--old(data-currency="руб.") 4300
+                                                    p.b-price__caption Экономия <span>3000</span> руб.
+                                            .b-content__action
+                                                .b-content__favourite.b-favourite
+                                                    button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                        +svg('b-favourite__icon', 'heart')
+                                                a(href='#').b-content__button.b-button В корзину
+                    .b-compilation__swiper-container.b-compilation__swiper-container--secondary.swiper-container(rel="js-slider")
+                        .swiper-wrapper
+                            .swiper-slide
+                                .b-compilation__card.b-card
+                                    .b-card__inner
+                                        a(href='#').b-card__preview.b-preview
+                                            img(src="img/card-3.png", alt="").b-preview__image
+                                            .b-preview__amount.b-amount
+                                                span.b-amount__num <span>14</span>
+                                                +svg('b-amount__icon', 'card-shape')
+                                        .b-card__content.b-content
+                                            .b-content__info
+                                                .b-content__price.b-price.b-price--sale
+                                                    .b-price__row
+                                                        span.b-price__cost(data-currency="руб." rel="js-price") 1250
+                                                        span.b-price__cost.b-price__cost--old(data-currency="руб.") 5600
+                                                a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                                .b-content__reviews.b-reviews
+                                                    .b-reviews__rating.b-rating(data-rating="2")
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                    a(href="#").b-reviews__val <span>12</span> отзывов
+                                            .b-content__action
+                                                .b-content__favourite.b-favourite
+                                                    button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                        +svg('b-favourite__icon', 'heart')
+                                                a(href='#').b-content__button.b-button В корзину
+                            .swiper-slide
+                                .b-compilation__card.b-card
+                                    .b-card__inner
+                                        a(href='#').b-card__preview.b-preview
+                                            img(src="img/card-3.png", alt="").b-preview__image
+                                            .b-preview__amount.b-amount
+                                                span.b-amount__num <span>5</span>
+                                                +svg('b-amount__icon', 'card-shape')
+                                        .b-card__content.b-content
+                                            .b-content__info
+                                                .b-content__price.b-price.b-price--sale
+                                                    .b-price__row
+                                                        span.b-price__cost(data-currency="руб." rel="js-price") 1250
+                                                        span.b-price__cost.b-price__cost--old(data-currency="руб.") 5600
+                                                a(href="#").b-content__name Donfeel HSD-010
+                                                .b-content__reviews.b-reviews
+                                                    .b-reviews__rating.b-rating(data-rating="5")
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                    a(href="#").b-reviews__val <span>56</span> отзывов
+                                            .b-content__action
+                                                .b-content__favourite.b-favourite
+                                                    button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                        +svg('b-favourite__icon', 'heart')
+                                                a(href='#').b-content__button.b-button В корзину
+                            .swiper-slide
+                                .b-compilation__card.b-card
+                                    .b-card__inner
+                                        a(href='#').b-card__preview.b-preview
+                                            img(src="img/card-2.png", alt="").b-preview__image
+                                            .b-preview__amount.b-amount
+                                                span.b-amount__num <span>7</span>
+                                                +svg('b-amount__icon', 'card-shape')
+                                        .b-card__content.b-content
+                                            .b-content__info
+                                                .b-content__price.b-price.b-price--sale
+                                                    .b-price__row
+                                                        span.b-price__cost(data-currency="руб." rel="js-price") 4000
+                                                        span.b-price__cost.b-price__cost--old(data-currency="руб.") 7900
+                                                a(href="#").b-content__name Donfeel HSD-010
+                                                .b-content__reviews.b-reviews
+                                                    .b-reviews__rating.b-rating(data-rating="3")
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                    a(href="#").b-reviews__val <span>109</span> отзывов
+                                            .b-content__action
+                                                .b-content__favourite.b-favourite
+                                                    button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                        +svg('b-favourite__icon', 'heart')
+                                                a(href='#').b-content__button.b-button В корзину
+                            .swiper-slide
+                                .b-compilation__card.b-card
+                                    .b-card__inner
+                                        a(href='#').b-card__preview.b-preview
+                                            img(src="img/card-1.png", alt="").b-preview__image
+                                            .b-preview__amount.b-amount
+                                                span.b-amount__num <span>1</span>
+                                                +svg('b-amount__icon', 'card-shape')
+                                        .b-card__content.b-content
+                                            .b-content__info
+                                                .b-content__price.b-price.b-price--sale
+                                                    .b-price__row
+                                                        span.b-price__cost(data-currency="руб." rel="js-price") 6700
+                                                        span.b-price__cost.b-price__cost--old(data-currency="руб.") 8000
+                                                a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                                .b-content__reviews.b-reviews
+                                                    .b-reviews__rating.b-rating(data-rating="4")
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                        .b-rating__item
+                                                            +svg('b-rating__icon', 'star')
+                                                    a(href="#").b-reviews__val <span>37</span> отзывов
+                                            .b-content__action
+                                                .b-content__favourite.b-favourite
+                                                    button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                        +svg('b-favourite__icon', 'heart')
+                                                a(href='#').b-content__button.b-button В корзину
+                .b-compilation__custom-navigation.b-custom-navigation.b-custom-navigation--secondary
+                    button.b-custom-navigation__button.b-custom-navigation__button--prev
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+                    button.b-custom-navigation__button.b-custom-navigation__button--next
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+
+    section.b-compilation(rel="js-compilation")
+        .b-compilation__container.b-container
+            .b-compilation__inner
+                .b-compilation__head
+                    h2.b-compilation__title.b-title Новинки
+                    a(href="#").b-compilation__link.b-link Смотреть все
+                        +svg('b-link__icon', 'arrow')
+                .b-compilation__swiper-container.swiper-container(rel="js-slider")
+                    .swiper-wrapper
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-2.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>1</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 2490
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="4")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>37</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-2.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>5</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 5600
+                                            a(href="#").b-content__name Donfeel HSD-010
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="5")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>56</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-1.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>3</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 4500
+                                            a(href="#").b-content__name Oral-B Pro 400 CrossAction Orange
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="3")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>28</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-3.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>2</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 5600
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16 Pro 600
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="4")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>30</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-3.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>7</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 8900
+                                            a(href="#").b-content__name Donfeel HSD-010
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="3")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>109</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                        .swiper-slide
+                            .b-compilation__card.b-card
+                                .b-card__inner
+                                    a(href='#').b-card__preview.b-preview
+                                        img(src="img/card-1.png", alt="").b-preview__image
+                                        .b-preview__amount.b-amount
+                                            span.b-amount__num <span>14</span>
+                                            +svg('b-amount__icon', 'card-shape')
+                                    .b-card__content.b-content
+                                        .b-content__info
+                                            .b-content__price.b-price
+                                                span.b-price__cost(data-currency="руб." rel="js-price") 1370
+                                            a(href="#").b-content__name Oral-B Pro 500 Cross Action D16
+                                            .b-content__reviews.b-reviews
+                                                .b-reviews__rating.b-rating(data-rating="2")
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                    .b-rating__item
+                                                        +svg('b-rating__icon', 'star')
+                                                a(href="#").b-reviews__val <span>12</span> отзывов
+                                        .b-content__action
+                                            .b-content__favourite.b-favourite
+                                                button.b-favourite__button(aria-label="favourite" rel="js-favourite")
+                                                    +svg('b-favourite__icon', 'heart')
+                                            a(href='#').b-content__button.b-button В корзину
+                .b-compilation__custom-navigation.b-custom-navigation
+                    button.b-custom-navigation__button.b-custom-navigation__button--prev
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+                    button.b-custom-navigation__button.b-custom-navigation__button--next
+                        +svg('b-custom-navigation__icon', 'slider-arrow')
+
+    section.b-benefits
+        .b-benefits__container.b-container
+            .b-benefits__inner
+                h3.b-benefits__title.b-title.b-title--centered Почему мы?
+                ul.b-benefits__list
+                    li.b-benefits__benefit.b-benefit
+                        .b-benefit__image
+                            img(src="img/benefit_1.png", alt="Бесплатная доставка").b-benefit__img
+                        .b-benefit__content
+                            h4.b-benefit__title Бесплатная доставка
+                            p.b-benefit__description При заказе от 1000 руб. бесплатная доставка по всей России
+                    li.b-benefits__benefit.b-benefit
+                        .b-benefit__image
+                            img(src="img/benefit_2.png", alt="Огромный ассортимент").b-benefit__img
+                        .b-benefit__content
+                            h4.b-benefit__title Огромный ассортимент
+                            p.b-benefit__description Более 1000 товаров собраны на одном сайте
+                    li.b-benefits__benefit.b-benefit
+                        .b-benefit__image
+                            img(src="img/benefit_3.png", alt="Бонусная программа").b-benefit__img
+                        .b-benefit__content
+                            h4.b-benefit__title Бонусная программа
+                            p.b-benefit__description Приятные бонусы и акции для постоянных покупателей
+
+    section.b-about
+        .b-about__container.b-container
+            .b-about__inner
+                h3.b-about__title.b-title.b-title--centered О компании
+                ul.b-about__list
+                    li.b-about__about-card.b-about-card
+                        .b-about-card__content
+                            .b-about-card__info
+                                h4.b-about-card__title.b-title.b-title--large Всё дело в людях
+                                p.b-about-card__text Стать нашим сотрудником просто: нужно любить людей!
+                            a(href="#").b-about-card__button.b-button О сотрудниках
+                        .b-about-card__image
+                            img(src="img/about_1.png", alt="").b-about-card__img
+                    li.b-about__about-card.b-about-card
+                        .b-about-card__content
+                            .b-about-card__info
+                                h4.b-about-card__title.b-title.b-title--large Производители
+                                p.b-about-card__text Мы тщательно отбираем поставщиков и гордимся рaботой с ними
+                            a(href="#").b-about-card__button.b-button Об условиях
+                        .b-about-card__image
+                            img(src="img/about_2.png", alt="").b-about-card__img
+                ul.b-about__list.b-about__list--grid
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_1.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text История компании
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_2.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text Миссия и ценности
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_3.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text Закулисье
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_4.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text Новости
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_5.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text СМИ о нас
+                    li.b-about__item
+                        a(href="#" style={"background-image":"url('img/about-bg_6.png')"}).b-about__about-link.b-about-link
+                            span.b-about-link__text Контакты

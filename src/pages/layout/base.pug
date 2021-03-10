@@ -1,0 +1,83 @@
+include ../common/mixins
+block variables
+
+<!doctype html>
+html(lang="ru-RU")
+  head
+    meta(charset="utf-8")
+    title #{title}
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    meta(name="keywords" content="")
+    <!--[if IE]>
+    meta(http-equiv='X-UA-Compatible', content="IE = edge")
+    <![endif]-->
+    meta(name="format-detection" content="telephone=no")
+    <meta name="description" content="Онлайн-магазин продажи зубных щеток"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <link rel="preload" href="libs/normalize.min.css" as="style">
+    <link rel="preload" href="libs/swiper-bundle.min.css" as="style">
+    link(rel="stylesheet", href="css/style.min.css")
+    block styles
+  body
+    -var page
+    main.b-wrapper
+      include ../modules/header/header
+      block page-content
+      include ../modules/footer/footer
+
+      .b-modal.b-modal--authorization#authorization
+        .b-modal__container.b-container
+          .b-modal__inner
+            .b-modal__close(rel="js-modal-closer")
+              +svg('b-modal__icon', 'delete')
+            .b-modal__content
+              .b-modal__form.b-form(rel="js-tabs")
+                .b-form__head
+                  .b-form__tab.active(rel="js-tabs-button") Вход
+                  .b-form__tab(rel="js-tabs-button") Регистрация
+                .b-form__content
+                  .b-form__wrap.active(rel="js-tabs-target")
+                    form(action="#" autocomplete="off").b-form__form
+                      .b-form__field
+                        input(type="email" placeholder="Электронная почта").b-form__input
+                        input(type="password" placeholder="Пароль").b-form__input
+                      .b-form__row
+                        .b-form__checkbox.b-checkbox
+                          input(type="checkbox").b-checkbox__input#checkbox-1
+                          label(for="checkbox-1").b-checkbox__label Запомнить меня
+                        a(href="#").b-form__link Забыли пароль?
+                      button(type="submit").b-form__button.b-button Войти
+                  .b-form__wrap(rel="js-tabs-target")
+                    form(action="#").b-form__form
+                      .b-form__field
+                        input(type="email" placeholder="Электронная почта").b-form__input
+                        input(type="password" placeholder="Пароль").b-form__input
+                        input(type="password" placeholder="Повторите пароль").b-form__input
+                      .b-form__row
+                        .b-form__checkbox.b-checkbox
+                          input(type="checkbox").b-checkbox__input#checkbox-2
+                          label(for="checkbox-2").b-checkbox__label
+                            |Согласен(на) с <a href='#'>условиями обработки персональных данных</a>
+                      button(type="submit").b-form__button.b-button Зарегистрироваться
+              .b-modal__divider или
+              .b-modal__media.b-modal-media
+                ul.b-modal-media__list
+                  li.b-modal-media__item
+                    a(href="#" title="Facebook" target="_blank" rel="noopener noreferrer").b-modal-media__link
+                      +svg('b-modal-media__icon', 'facebook')
+                  li.b-modal-media__item
+                    a(href="#" title="Вконтакте" target="_blank" rel="noopener noreferrer").b-modal-media__link
+                      +svg('b-modal-media__icon', 'vkontacte')
+                  li.b-modal-media__item
+                    a(href="#" title="GooglePlus" target="_blank" rel="noopener noreferrer").b-modal-media__link
+                      +svg('b-modal-media__icon', 'google')
+
+    //vendor scripts
+    script(src="libs/svgxuse.min.js")
+    script(src="libs/jquery-3.5.1.min.js")
+    <script src="libs/swiper-bundle.min.js"></script>
+    script(src="libs/da.js")
+    script(src="js/scripts.js")
+    //user scripts
+    block script
